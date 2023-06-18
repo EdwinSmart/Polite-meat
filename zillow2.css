@@ -1,0 +1,351 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  width: 1000;
+  background-color: #808080;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.5s ease;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #007bff;
+}
+
+/* Media query to make the navigation links responsive */
+  nav {
+    height: auto;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+      justify-content: flex-end;
+      align-items: center;
+     
+      height: 50px;
+      border: 5px solid #000000;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+
+  nav a.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff8c00;
+}
+
+/* Header styles */
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+}
+
+/* Main styles */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0 0 20px;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+ul li:before {
+  content: "• ";
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Flex container for house cards */
+.house-cards {
+  display: flex; /* Set display to flex */
+  flex-wrap: wrap; /* Allow items to wrap to a new line */
+  justify-content: space-between; /* Distribute items evenly */
+  margin-top: 20px;
+}
+
+/* House card styles */
+.house-card {
+  width: calc(33.33% - 10px); /* Set the width to one-third minus the margins */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.house-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.house-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.house-card p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Filter section styles */
+.filter-section {
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+height: 800px;
+}
+.filter-section2 {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  height: 1200px;
+}
+
+.filter-section2 h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.filter-section2 label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter-section2 select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: #555
+ 
+}
+
+.filter-section2 input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 5px;
+  margin-bottom: 20px;
+}
+
+.filter-section2 input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.filter-section2 input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-section2 input[type="range"]:focus {
+  outline: none;
+}
+
+.filter-section2 input[type="range"]:focus::-webkit-slider-runnable-track {
+  background-color: #ddd;
+}
+
+.filter-section2 button {
+  background-color: #ff8c00;
+  color: #ff8c00;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-section2 button:hover {
+  background-color: #006a8e;
+}
+
+.filter-section h1 {
+  font-size: 28px;
+  margin-top: 0;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.filter-section h2 {
+  font-size: 28px;
+  margin-top: 0;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.filter-section h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.filter-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.filter-section select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.filter-section input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 5px;
+  margin-bottom: 20px;
+}
+
+.filter-section input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.filter-section input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-section input[type="range"]:focus {
+  outline: none;
+}
+
+.filter-section input[type="range"]:focus::-webkit-slider-runnable-track {
+  background-color: #ddd;
+}
+
+.filter-section button {
+  background-color: #ff8c00;
+  color: #ff8c00;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-section button:hover {
+  background-color: #006a8e;
+}
+.name {
+  text-color: #fff;
+  padding: 20px;
+}
+.input-group {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+

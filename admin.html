@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="admin2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<section>
+	<div class="sidebar">
+		<h1 class="logo">Polite Meat Suppliers</h1>
+
+		<ul class="nav">
+			<li><a href="#"><i class="fa fa-windows"></i> Dashboard</a></li>
+			<li class="active"><a href="#"><i class="fa fa-shopping-bag"></i> Order</a></li>
+			<li><a href="#"><i class="fa fa-pie-chart"></i> Statistic</a></li>
+			<li><a href="#"><i class="fa fa-cube"></i> Product</a></li>
+			<li><a href="#"><i class="fa fa-database"></i> Stock</a></li>
+			<li><a href="#"><i class="fa fa-tag"></i> Offer discounts</a></li>
+
+		</ul>
+
+		<ul class="social">
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">Google</a></li>
+		</ul>
+		
+
+	</div>
+	<div class="main">
+		
+		<div class="head-section">
+			<div class="col-6">
+				<h2>Order Management System</h2>
+					<p style="color: #ffc800;">30 orders found</p>
+			</div>
+
+			<div class="col-6" style="text-align: right;">
+				<i class="fa fa-bell-o hicon"></i>
+				<input type="text" class="search">
+				<i class="fa fa-search hicon sicon"></i>
+
+				<img src="image/user.png" class="user">
+
+				<div class="profile-div">
+					<p><i class="fa fa-user"></i>   Profile</p>
+					<p><i class="fa fa-cog"></i>   Settings</p>
+					<p><i class="fa fa-power-off"></i>   Log Out</p>
+				</div>
+
+				<div class="notification-div">
+					<p>Success! Your registration is now complete!</p>
+					<p>Here's some information you may find useful!</p>			
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
+		<br><br>
+		<div class="content">
+			<p>All orders</p><br><br>
+
+			<!-- Date Range Filter -->
+			<div class="date-range">
+				<label for="fromDate"<style="color: #ffc800;">From:</label>
+				<input type="date" id="fromDate" style="background-color: #000000; color: #ffc800; width: 250px; height: 70px; font-size: 28px; font-weight: bold; border-radius: 15px;">
+				<label for="toDate">To:</label>
+				<input type="date" id="toDate" style="background-color: #000000; color: #ffc800; width: 250px; height: 70px; font-size: 28px; font-weight: bold; border-radius: 15px;">
+				<button onclick="filterByDateRange()" style="background-color: #ffc800; width: 150px; height: 70px; font-size: 28px; font-weight: bold; border-radius: 15px;">Filter</button>
+			</div>
+
+			<!-- Order Table -->
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Type of Meat</th>
+						<th scope="col">Amount (kg)</th>
+						<th scope="col">Location</th>
+						<th scope="col">Amount
+(in Kshs)</th>
+<th scope="col">Phone Number</th>
+<th scope="col">Date</th>
+<th scope="col">Time</th>
+<th scope="col">Status</th>
+<th scope="col">Action</th>
+</tr>
+</thead>
+<tbody id="orderTableBody">
+  <!-- Orders will be dynamically populated here -->
+</tbody>
+</table>
+</br>
+		<!-- Calculated Results -->
+		<div class="results">
+			<p>Total Delivered Orders: <span id="totalDelivered"></span></p>
+			<p>Total Amount (Delivered): <span id="totalAmountDelivered"></span></p></br></br>
+			<p>Total Pending Orders: <span id="totalPending"></span></p>
+			<p>Total Amount (Pending): <span id="totalAmountPending"></span></p></br></br>
+			<p>Total Cancelled Orders: <span id="totalCancelled"></span></p>
+			<p>Total Amount (Cancelled): <span id="totalAmountCancelled"></span></p>
+		</div>
+	</div>
+</div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+      $(".user").click(function() {
+        $(".profile-div").toggle(1000);
+      });
+      $(".hicon:nth-child(1)").click(function() {
+            $(".notification-div").toggle(1000);
+            });
+            $(".sicon").click(function() {
+            $(".search").toggle(1000);
+            });
+            });
+// Fetch order data from JSON file
+            $(document).ready(function() {
+                  $.getJSON("orders.json", function(data) {
+                        populateOrderTable(data);
+                        calculateResults(data);
+                        });
+                        });
+                        
+                        // Populate the order table with data
+                        function populateOrderTable(data) {
+                          var tableBody = $("#orderTableBody");
+                          
+                          // Clear existing table data
+                          tableBody.empty();
+                          
+                          // Iterate over each order and append a table row
+$.each(data, function(index, order) {
+                                var row = $("<tr></tr>");
+                          
+                                // Populate the table cells with order data
+                                row.append("<td>" + order.meat + "</td>");
+                                row.append("<td>" + order.amount + "</td>");
+                                row.append("<td>" + order.location + "</td>");
+                                row.append("<td>" + order.totalAmount + "</td>");
+                                row.append("<td>" + order.phoneNumber + "</td>");
+row.append("<td>" + order.date + "</td>");
+                                row.append("<td>" + order.time + "</td>");
+                                
+                                // Create a select element for order status
+                                var statusSelect = $("<select></select>");
+statusSelect.append("<option value='Pending'>Pending</option>");
+                                statusSelect.append("<option value='Delivered'>Delivered</option>");
+statusSelect.append("<option value='Cancelled'>Cancelled</option>");
+                                
+                                // Set the selected status based on order data
+statusSelect.val(order.status);
+                                
+                                // Attach change event listener to update order status
+                                statusSelect.on("change", function() {
+                                      order.status = $(this).val();
+// Update order status in the database or perform any other necessary action
+                                      });
+                                      
+                                      // Append the status select element to the table
+                                      row.append($("<td></td>").append(statusSelect));
+// Append the row to the table body
+                                      tableBody.append(row);
+                                      });
+                                      }
+                                      
+                                      // Calculate and display the results
+                                      function calculateResults(data) {
+                                              // Initialize counters and amounts
+                                              var totalDelivered = 0;
+                                              var totalAmountDelivered = 0;
+                                              var totalPending = 0;
+                                              var totalAmountPending = 0;
+var totalCancelled = 0;
+                                              var totalAmountCancelled = 0;
+	// Iterate over each order and update counters and amounts accordingly
+	$.each(data, function(index, order){
+		if (order.status === 'Delivered') {
+			totalDelivered++;
+			totalAmountDelivered += order.totalAmount;
+		} else if (order.status === 'Pending') {
+			totalPending++;
+			totalAmountPending += order.totalAmount;
+		} else if (order.status === 'Cancelled') {
+			totalCancelled++;
+			totalAmountCancelled += order.totalAmount;
+		}
+	});
+
+	// Display the calculated results
+	$("#totalDelivered").text(totalDelivered);
+	$("#totalAmountDelivered").text(totalAmountDelivered);
+	$("#totalPending").text(totalPending);
+	$("#totalAmountPending").text(totalAmountPending);
+	$("#totalCancelled").text(totalCancelled);
+	$("#totalAmountCancelled").text(totalAmountCancelled);
+}
+
+// Filter orders by date range
+function filterByDateRange() {
+	// Get the selected date range values
+	var fromDate = $("#fromDate").val();
+	var toDate = $("#toDate").val();
+
+	// Fetch order data from JSON file
+	$.getJSON("orders.json", function(data){
+		// Filter the data based on the specified date range
+		var filteredData = data.filter(function(order){
+			return order.date >= fromDate && order.date <= toDate;
+		});
+
+		// Populate the filtered data into the table and recalculate the results
+		populateOrderTable(filteredData);
+		calculateResults(filteredData);
+	});
+}
+</script> 
+<script>
+// Function to filter orders based on meat type and date range
+function filterOrders() {
+  var meatType = document.getElementById("meatType").value;
+  var startDate = document.getElementById("startDate").value;
+  var endDate = document.getElementById("endDate").value;
+
+  var filteredOrders = orders.filter(function (order) {
+    return (
+      (meatType === "all" || order.meat === meatType) &&
+      (startDate === "" || order.date >= startDate) &&
+      (endDate === "" || order.date <= endDate)
+    );
+  });
+
+  // Update the table with filtered orders
+  updateTable(filteredOrders);
+}
+
+// Add event listener to the filter button
+document.getElementById("filterButton").addEventListener("click", filterOrders);
+
+</script>
+</body>

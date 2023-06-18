@@ -1,0 +1,246 @@
+/* Admin Dashboard CSS */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  font-size: 28px;
+}
+
+section {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #000000;
+  color: #ffc800;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar ul.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul.nav li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul.nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar ul.nav li.active a {
+  font-weight: bold;
+}
+
+.sidebar ul.social {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar ul.social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.sidebar ul.social li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  background-size: #000000;
+}
+
+.head-section {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  color: #ffc800;
+  height: 150px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.head-section h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.head-section p {
+  color: #888;
+  margin: 0;
+}
+
+.head-section .search {
+  display: none;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.head-section .user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-div {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.profile-div p {
+  margin: 0;
+  padding: 5px;
+}
+
+.notification-div {
+  display: none;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.pe {
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.de {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ticon {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.active-tr {
+  background-color: #f2f2f2;
+}
+
+/* Additional Styles for Buttons and Date Range Section */
+
+.buttons-section {
+  margin-bottom: 20px;
+}
+
+.buttons-section button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.buttons-section button:hover {
+  background-color: #45a049;
+}
+
+.date-range-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.date-range-section label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.date-range-section input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.date-range-section button {
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.date-range-section button:hover {
+  background-color: #0077A3;
+}
+
+ 

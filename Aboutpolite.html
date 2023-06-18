@@ -1,0 +1,463 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Polite Meat</title>
+    <link rel="stylesheet" href="zillow.css">
+    <link rel="stylesheet" href="zillow2.css">
+    <link rel="stylesheet" href="footer.css">
+
+<link rel="stylesheet" href="housecards.css">
+<link rel="stylesheet" href="propc.css">
+
+
+  <style>
+header {
+  width: 1000px;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+      }
+      .container2 {
+        background-color: #000000;
+        color: #ffffff;
+        width: 1000px;
+      }
+      .slideshow-container {
+        width: 300%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: left 0.5s ease-in-out;
+      }
+      
+      .slideshow-image {
+        width: 38.3333%;
+        height: 100
+        float: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      .slideshow-1 { background-image: url('goaticon.jpeg'); }
+      .slideshow-2 { background-image: url('chickenicon.jpeg'); }
+      .slideshow-3 { background-image: url('beeficon4.jpeg'); }
+.container {
+  text-align: center;
+  width: 900px;
+  background-color: #f2f2f2;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 340px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-items: center; /* Add this line to vertically center the modal content */
+    }
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Add this line to center the content vertically */
+  margin: 0 auto; /* Update margin to center the content horizontally */
+  padding: 20px;
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: 5px;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+    .modal-images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Add this line to allow images to wrap to the next line */
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .modal-images img {
+      max-width: 100%;
+      max-height: 100%; /* Add this line to ensure the images fit within the modal height */
+      object-fit: contain; /* Add this line to maintain aspect ratio of the images */
+      border-radius: 5px;
+      cursor: pointer; /* Add this line to indicate the image is clickable */
+      transition: transform 0.3s ease; /* Add this line to create a smooth transition */
+    }
+
+    .modal-images img.enlarged {
+      transform: scale(2.0); /* Add this line to enlarge the image */
+    }
+    
+    .modal-images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Add this line to allow images to wrap to the next line */
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      font-weight: bold;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+    }
+
+  </style>
+</head>
+<body>
+<div id="preloader">
+        <div class="nut-spinner"></div>
+        <p><h2>Polite Meat <br>Suppliers...<br>Please wait</h2></p>
+      </div>
+		<nav>
+      
+      		  <a href="politehome.html" class="logo"><img src=politeicon3.jpg alt="logo" width="220" height="135" style="border-radius: 15px;" id="logo"></a>
+      		  <div class="dropdow">
+      		    <button class="btn2"> <a href="Aboutpolite.html">
+      		        <b><u>ABOUT US</u></b></a></button>
+      		    <div class="dropdown-content">
+      		      <a href="Space254_home.html"><u>Beef</u>&nbsp</a>
+      		      <a href="Space254_home.html"><u>Goat</u>&nbsp <u>Meat</u></a>
+      		      <a href="Space254_home.html"><u>Chicken</u>&nbsp <u>Meat</u></a>
+      		      <br>
+      		    </div>
+      		  </div>
+      		  &nbsp &nbsp
+      		  <div class="dropdown">
+      		    <button class="btn2"><b><u>CONTACT US</u></b></button>
+      
+      		    <div class="dropdown-content">
+      		      <a href="https://www.tiktok.com/@politemeat?_t=8d3rTV4LIcI&_r=1">
+      		        <u>TikTok</u>
+      
+      		      </a>
+      		      <a href="
+      https://twitter.com/PoliteMeat?t=YgrSyMpMrHMjdTWiMferKQ&s=09"><u>Twitter</u></a>
+      		      <a href="https://www.instagram.com/invites/contact/?i=1boiz99cge086&utm_content=pcmg7j5"><u>Instagram</u></a>
+      		      <a href="
+      https://www.facebook.com/politemeatsuppliers?mibextid=ZbWKwL"><u>Facebook</u></a>
+      
+      		      <a href=""><u>Call us on 0707079702</u></a>
+      		    </div>
+      
+      		  </div>
+      
+      
+      		  &nbsp &nbsp
+      		  <div class="dropdown">
+      		    <button class="btn2"><b><u>MENU </u>&nbsp<u>LIST</u></b></button>
+      		    <div class="dropdown-content">
+      		      <a href="Politemeatpricing.html"><u>Special discount</u>
+      		        <u>Offers</u></a>
+      
+      		      <a href="Politemeatpricing.html"><u>Our </u>
+      		        <u>Pricing</u></a>
+      
+      		      <a href="chatbox.html"><u>Chat with us</u></a>
+      		      <a href="abc.html"><b><u>Dashboard</u></b></a>
+      
+      
+      		    </div>
+      		  </div>
+      
+      		</nav>
+    <header class="header-container">
+  <div class="slideshow-container">
+    <div class="slideshow-image slideshow-1"></div>
+    <div class="slideshow-image slideshow-2"></div>
+    <div class="slideshow-image slideshow-3"></div>
+  </div>
+  <div class="overlay"></div>
+
+  <div class="header-content">
+      <h1>Welcome To Polite Meat Suppliers</h1>
+          <p>Find delicious, fresh & affordable Halal meat today.</p>
+       <h2>
+          <a href="Space254_commercial.html" class="btn"><u><b>CLICK HERE TO PLACE</b> </u>YOUR MEAT ORDER</a></h2>
+  </div>
+</header> 
+<br>
+<main>
+      <div class="container2">
+        <h1 style="font-size: 40px; font-weight: bold;"><u>POLITE</u> <u>MEAT</u> <u>SUPPLIERS</u></h1>
+        <div class="about-us">
+          <h1 style="font-size: 35px; font-weight: bold;"><u>ABOUT</u>&nbsp
+            <u> US</u>
+          </h1>
+          <p>Polite Meat Suppliers - Based in Kenya</p>
+          <p style="font-size: 30px;">At Polite Meat Suppliers, we take pride in delivering high-quality halal meat right to your doorstep. With over 3 years of experience in the industry, we are dedicated to providing the freshest and finest selection of beef, goat, chicken, pork, and fish.</p>
+          <p style="font-size: 30px;">Our commitment to quality extends to our exceptional customer service. We strive to exceed your expectations by offering reliable and timely deliveries, ensuring your meat arrives in perfect condition.</p>
+          <p style="font-size: 30px;">As a locally-based business in Kenya, we source our meat from trusted suppliers, supporting local farmers and ensuring sustainability. We prioritize hygiene and follow stringent quality standards throughout our supply chain.</p>
+          <p style="font-size: 30px;">Whether you're a restaurant owner, a large institution, caterer, or simply a meat lover looking for premium cuts or whole meat, Polite Meat Suppliers is your number one go-to destination. Place your order today and experience the convenience and satisfaction of our meat delivery service.</p>
+    
+          <h1><u>Mission</u></h1>
+          <p style="font-size: 30px;">Our mission is to provide our customers with the highest quality meat products, delivered with exceptional service, convenience, and reliability. We aim to be the leading meat supplier in Kenya, trusted for our commitment to quality, sustainability, and customer satisfaction.</p>
+    
+          <h1><u>Vision</u></h1>
+          <p style="font-size: 30px;">Our vision is to revolutionize the meat delivery industry by setting new standards for quality, transparency, and convenience. We envision a future where everyone can enjoy the finest meats, sourced responsibly, and delivered with professionalism. We strive to build lasting relationships with our customers and become their trusted partner in meat supply.</p>
+        </div>
+        </br>
+        <br>
+    
+        <div id="reviewsSection">
+          <h1>Customer Reviews</h1>
+          <div class="testimonial">
+            <p class="quote">"I'm very impressed with the quality of the meat and the timely delivery. Highly recommended!"</p>
+            <p class="customer">- John Doe</p>
+          </div>
+    
+          <div class="testimonial">
+            <p class="quote">"The variety of meat options and the excellent customer service make this my go-to meat delivery service."</p>
+            <p class="customer">- Jane Smith</p>
+          </div>
+    
+          <div class="testimonial">
+            <p class="quote">"I've tried several meat delivery services, but this one stands out. Fresh meat, reasonable prices, and great communication."</p>
+            <p class="customer">- David Johnson</p>
+          </div>
+    
+          <div class="testimonial">
+            <p class="quote">"Outstanding service! The meat is always tender, and the delivery is prompt. Keep up the good work!"</p>
+            <p class="customer">- Sarah Thompson</p>
+          </div>
+    
+          <div class="testimonial">
+            <p class="quote">"I've been a customer for years, and I'm always satisfied with the quality and service. Highly recommended!"</p>
+            <p class="customer">- Michael Brown</p>
+          </div>
+    
+          <div class="testimonial">
+            <p class="quote">"The meat is always fresh and delicious. The team goes above and beyond to meet my specific requests. Thank you!"</p>
+            <p class="customer">- Emily Wilson</p>
+          </div>
+    
+          <div class="testimonial">
+            <p class="quote">"I'm impressed with the attention to detail and the personalized customer experience. Definitely my favorite meat delivery service!"</p>
+            <p class="customer">- Robert Davis</p>
+          </div>
+    
+          <div class="testimonial">
+            <p class="quote">"Quick and reliable delivery service. The meat is of exceptional quality, and the prices are competitive. Highly recommended!"</p>
+            <p class="customer">- Jennifer Adams</p>
+          </div>
+    
+          <div class="testimonial">
+            <p class="quote">"I appreciate the convenience and professionalism of this meat delivery service. It's made my meal planning so much easier!"</p>
+            <p class="customer">- Christopher Lee</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</main>
+<div class="container3">
+      <div class="row">
+        <div class="col-md-4">
+
+            <h3 style="text-align: center; color: #ffffff;">
+<u>ABOUT</u> <u>US</u></h3>
+          <p style="color: #ffffff;">Polite Meat Suppliers is an entreprise that specializes in the procurement and delivery of Halal meat in Kenya. We make it easy for meat lovers to find a constant supply of Halal meat products quickly and effortlessly as well as affordably at the convenience of their location. Place your Order now! simply with the touch of a button.</p>
+  
+          <ol class="social-icons">
+            <li><a href="#"><h3><u>NAIROBI</u></h3></a></li>
+            <li><a href="#"><u><h3>KISUMU</h3></u></a></li>
+            <li><a href="#"><u><h3>MOMBASA</h3></u></a></li>
+            <li><a href="#"><u><h3>NAKURU</h3></u></a></li>
+            <li><a href="#"><u><h3>ELDORET</h3></u></a></li>
+          </ol>
+        </div>
+        <div class="col-md-4">
+          <h3><u>CONTACT</u> <u>US</u></h3>
+          <p style="color: #ffffff">Outering Road Nairobi<br>
+            Kenya<br>
+            Email: Politemeatsuppl@gmail.com</p><br>
+            <p style= "color: #ffffff;">
+            Call us now:
+            <br>
+                 <img src="callbutton1.png" alt="Example Image"><br>+254707079702</p>
+        </div>
+        
+
+
+        <div class="col-md-4">
+          <h3 style="color: #ffffff;">OR
+          <br><u>CONNECT</u><br>
+           <u>WITH</u> <u>US</u> </br><u>ON:</u>
+          </h3>
+     <div style="display: flex; justify-content: center; align-items: center;">
+      		          		          <a href="https://www.tiktok.com/@politemeat?_t=8d3rTV4LIcI&_r=1">
+                 <img src="tiktok.png" alt="Example Image"> </a>
+                 <p style="margin-left: 10px; color: #ffffff;">TikTok&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              
+                 </p>
+               </div>
+               <br>
+      
+<div style="display: flex; justify-content: center; align-items: center;">
+      		          		          <a href="
+  https://www.facebook.com/politemeatsuppliers?mibextid=ZbWKwL">
+  <img src="facebook.png" alt="Example Image"> </a>
+  <p style="margin-left: 10px; color: #ffffff;">FACEBOOK
+&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  </p>
+</div>
+</br>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+      		          		          <a href="
+  https://twitter.com/PoliteMeat?t=YgrSyMpMrHMjdTWiMferKQ&s=09">
+  <img src="twitter.png" alt="Example Image"> </a>
+
+  <p style="margin-left: 10px; color: #ffffff;">TWITTER
+&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+  </p>
+</div>
+</br>
+
+     <div style="display: flex; justify-content: center; align-items: center;">
+      		          		          <a href="https://www.instagram.com/invites/contact/?i=1boiz99cge086&utm_content=pcmg7j5">
+      		          
+  <img src="instagram.jpeg" alt="Example Image">
+  </a>
+  <p style="margin-left: 10px; color: #ffffff;">INSTAGRAM&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  </p>
+</div>
+    </div>
+    </br>
+
+    <p style="color: #ffffff">
+      Copyright@ Politemeat
+    suppliers  ltd
+    </p>
+  
+ 
+
+<script src="script.js"></script>
+      	  </section>
+      	  <script>
+      // Hide the loader after 2 seconds
+      window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  setTimeout(function () {
+    preloader.style.display = "none";
+  }, 2000);
+});
+
+
+    </script>
+  <script>
+    const cardsContainer = document.querySelector('.cards-container');
+    const modal = document.querySelector('.modal');
+    const modalContent = document.querySelector('.modal-content');
+    const modalImages = document.querySelector('.modal-images');
+    const modalDescription = document.querySelector('.modal-description');
+    const closeBtn = document.querySelector('.close');
+
+    // Fetch data from JSON file
+    fetch('Meatstock.json')
+      .then(response => response.json())
+      .then(data => {
+        // Generate house cards
+        data.forEach(house => {
+          const card = document.createElement('div');
+          card.classList.add('card');
+          card.innerHTML = `
+            <img src="${house.image}" alt="${house.name}">
+            <p>${house.name}</p>
+            <p>${house.description}</p> <!-- Add the description here -->
+          `;
+          card.addEventListener('click', () => openModal(house));
+          cardsContainer.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.log('An error occurred:', error);
+      });
+
+    // Open modal with house details
+    function openModal(house) {
+      modalImages.innerHTML = '';
+      house.images.forEach(image => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.addEventListener('click', () => toggleEnlarged(img)); // Add event listener to the image
+        modalImages.appendChild(img);
+      });
+
+      modalDescription.textContent = house.description;
+      modal.style.display = 'block';
+    }
+
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', event => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+    
+    // Toggle image enlargement
+    function toggleEnlarged(img) {
+      img.classList.toggle('enlarged');
+    }
+  </script>
+    <script>
+        var currentImageIndex = 1;
+        setInterval(function() {
+          currentImageIndex++;
+          if (currentImageIndex > 3) {
+            currentImageIndex = 1;
+          }
+          var nextSlideClass = "slideshow-" + currentImageIndex;
+          var slideshowContainer = document.querySelector(".slideshow-container");
+          slideshowContainer.style.left = "-" + ((currentImageIndex - 1) * 100) + "%";
+          slideshowContainer.classList.remove("slideshow-1", "slideshow-2", "slideshow-3");
+          slideshowContainer.classList.add(nextSlideClass);
+        }, 8000); // Change image every set seconds
+      </script>
+</body>
+</html>
+
