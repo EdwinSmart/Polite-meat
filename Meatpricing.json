@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Beef Steaks",
+    "image": "pricing1.jpg",
+    "images": ["beef12.jpeg", "beef13.jpeg", "beef10.jpeg", "beef8.jpeg", "beef5.jpeg"],
+              "description": "1 Kg @ Kshs 550"
+            },
+  {
+    "name": "Goat meat",
+    "image": "pricing6.jpg",
+    "images": ["goat3.jpeg", "goatshank2.jpeg", "goatshank4.jpeg", "goatshank5.jpeg", "goatshank1.jpeg"],
+     "description": "1 KG Kshs470."
+            },
+  {
+    "name": "Beef Liver",
+    "image": "pricing3.jpg",
+    "images": ["chickenicon1.jpeg", "chicken7.jpeg", "chicken3.jpeg", "chicken4.jpeg", "chicken5.jpeg"],
+    "description": "1 Kg liver @ Kshs. 600"
+            },
+  {
+    "name": "Goat",
+    "image": "pricing4.jpg",
+    "images": ["goat6.jpeg", "goat3.jpeg", "goat4.jpeg", "goat5.jpeg", "goat3.jpg"],
+    "description": "Savor the rich flavors of top-quality breed halal goat meat, in this exquisite assortment brought to your doorstep by Oolite Meat Suppliers, your number one trusted Meat Partner. Order Now!"
+            },
+
+              {
+                "name": "Beef Steaks",
+                "image": "icing5.jpg",
+                "images": ["beef12.jpeg", "beef13.jpeg", "beef10.jpeg", "beef8.jpeg", "beef5.jpeg"],
+                "description": "A variety of mouthwatering Beef cuts including beef steak, beef ribs , liver and much more from polite meat suppliers"
+                        },
+              {
+                "name": "Goat meat",
+                "image": "pricing6.jpg",
+                "images": ["goat3.jpeg", "goatshank2.jpeg", "goatshank4.jpeg", "goatshank5.jpeg", "goatshank1.jpeg"],
+                "description": "A Gourmet of excquisite goat meat cuts including goat leg, ribs, head+hooves, goat shanks and many more from polite meat suppliers, your number one trusted meat partner."
+                        },
+              {
+                "name": "Chicken Meat",
+                "image": "pricing7.jpg",
+                "images": ["chickenicon1.jpeg", "chicken7.jpeg", "chicken3.jpeg", "chicken4.jpeg", "chicken5.jpeg"],
+                "description": "Indulge in the finest cuts of chicken including chicken vienna, chicken fillet and drumsticks as well as wholesale for an exquisite dining experience at the most affordable cost and have it brought to your doorstep by Polite Meat Suppliers, your number one trusted meat partner. Order now!"
+                        },
+              {
+                "name": "Goat",
+                "image": "pricing8.jpg",
+                "images": ["goat6.jpeg", "goat3.jpeg", "goat4.jpeg", "goat5.jpeg", "goat3.jpg"],
+                "description": "Savor the rich flavors of top-quality breed halal goat meat, in this exquisite assortment brought to your doorstep by Polite Meat Suppliers, your number one trusted Meat Partner. Order Now!"
+                        }
+                        ]

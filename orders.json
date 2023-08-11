@@ -1,0 +1,52 @@
+[
+  {
+    "meat": "Goat",
+    "amount": 18,
+    "location": "Kiambu",
+    "totalAmount": 8750,
+    "phoneNumber": "0778901234",
+    "date": "2023-06-10",
+    "time": "11:15 AM",
+    "status": "Delivered"
+  },
+  {
+    "meat": "Beef",
+    "amount": 12,
+    "location": "Nairobi",
+    "totalAmount": 5600,
+    "phoneNumber": "0712345678",
+    "date": "2023-06-11",
+    "time": "09:30 AM",
+    "status": "Pending"
+  },
+  {
+    "meat": "Chicken",
+    "amount": 10,
+    "location": "Mombasa",
+    "totalAmount": 4800,
+    "phoneNumber": "0723456789",
+    "date": "2023-06-12",
+    "time": "03:45 PM",
+    "status": "Delivered"
+  },
+  {
+    "meat": "Pork",
+    "amount": 15,
+    "location": "Nakuru",
+    "totalAmount": 7200,
+    "phoneNumber": "0765432109",
+    "date": "2023-06-13",
+    "time": "01:00 PM",
+    "status": "Cancelled"
+  },
+  {
+    "meat": "Lamb",
+    "amount": 20,
+    "location": "Eldoret",
+    "totalAmount": 9500,
+    "phoneNumber": "0732109876",
+    "date": "2023-06-14",
+    "time": "10:20 AM",
+    "status": "Delivered"
+  }
+]
